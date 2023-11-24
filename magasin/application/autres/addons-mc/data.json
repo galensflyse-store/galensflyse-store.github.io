@@ -1,127 +1,38 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+{
+  "applications": [
+    {
+      "name": "Kellys_RTX_Base_pack_3.1_skin_fix_1 ",
+      "size": "616 MB",
+      "by": "Kelly the derg",
+      "date": "Update : 01.11.2023",
+      "advantage": "( RTX nécessaire )",
+      "description": "This is a simple vanilla texture pack/conversion for RTX on Minecraft Windows 10 Edition! It's for the most part an exact conversion, and all non-moving things have been converted. Everything has had special care, and tweaking put into it! :)
 
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="https://ebsayder-mg.github.io/script.js"></script>
-     <!-- <link> et <script>   -->
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,700'>
-<link rel="icon" href="https://ebsayder-mg.github.io/favicon.ico" />
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,700'>
-<link rel="stylesheet" href="./c-s/style.css">
-   <link rel="stylesheet" href="https://ebsayder-mg.github.io/style.css">
-<link rel="icon" href="https://ebsayder-mg.github.io/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://galensflyse-store.vercel.app/magasin/application/s-c/application.css">
-  <title>GalensFlyse Store ; Minecraft Bedrock </title>
-</head>
-</head>
-<body>
- 
-  <body>
-<!-- partial:index.partial.html -->
-<header>
-  <div class='container'>
-    <div class='mobile_nav'>
-      <button class='burger' title='Open and close menu'>
-        <span class='mobile_nav__label'>Menu</span>
-        <div class='top stripe'></div>
-        <div class='middle stripe'></div>
-        <div class='bottom stripe'></div>
-      </button>
-    </div>
-    <div class='mobile_menu'>
-      <nav>
-        <ul>
-          <li class='visited'>
-            <a href='https://galensflyse-store.vercel.app/'>Home</a>
-          </li>
- 
-        </ul>
-      </nav>
-    </div>
-    <div class='logo'>
-      <span>GelensFlyse // Store</span>
-    </div>
-    <nav class='head_nav'>
-      <ul>
-        <li class='visited'>
-          <a href='https://galensflyse-store.vercel.app/'>Home</a>
-        </li>
-        
-        
-      </ul>
-    </nav>
-    <div class='icons'>
-      <div class='block'>
-       
-      </div>
-      
-    </div>
-  </div>
-</header>
-<main>
+(https://youtube.com/embed//vd-XTnGS_no) Thank you so much Markom for creating this amazing showcase video!! I appreciate your hard work <3
+       ",
+      "installUrl": "http://galensflyse-store.github.io/magasin/application/autres/addons-mc/source/Kellys_RTX_Base_pack_3.1_skin_fix_1.mcpack",
+      "openUrl": "https://mcpedl.com/kellys-minecraft-vanilla-rtx-conversion-pack/",
+      "imageUrl": "n.a"
+    },
 
 
-  <body>
+     {
+      "name": "Kellys_RTX_Base_pack_3.1_skin_fix_1 ",
+      "size": "616 MB",
+      "by": "By Nicinator",
+      "date": "Update : 01.11.2023",
+      "advantage": "   ( RTX nécessaire )",
+      "description": "Have you ever wanted to use raytracing with the vanilla textures? Then this texture pack could be something for you! Vanilla RTX is a vanilla based RTX texture pack with PBR support.",
+      "installUrl": "http://galensflyse-store.github.io/magasin/application/autres/addons-mc/source/Vanilla-RTX-Normals-v1.8.0.mcpack",
+      "openUrl": "https://mcpedl.com/vanilla-rtx/",
+      "imageUrl": "n.a"
+    },
 
-<main class="main flow">
+     
+
+     
+    
+  ]
+
   
-  <div id="app"></div>
-  
-</main>
-
-
-<script src="https://galensflyse-store.vercel.app/magasin/application/s-c/application.js"></script>
-<script>
-  
-document.addEventListener('DOMContentLoaded', function () {
-  fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-      const appContainer = document.getElementById('app');
-      data.applications.forEach(app => {
-        const card = document.createElement('div');
-        card.classList.add('cards__card', 'card');
-
-        card.innerHTML = `
-        <h1 class="main__heading">Minecraft ( Bedrock )</h1>
-          <h2 class="card__heading">${app.name}</h2>
-          <p class="card__price">Par ${app.by}</p>
-          <ul role="list" class="card__bullets flow">
-            <li>Taille: ${app.size}</li>
-            <li>Date: ${app.date}</li>
-            <li>Avantage: ${app.advantage}</li>
-            <li>Description: ${app.description}</li>
-          </ul>
-          <a href="${app.installUrl}" class="card__cta cta">Installer</a>
-          <br><br>
-          <a href="${app.openUrl}" class="card__cta cta">Visitez la source</a>
-        <div class="overlay cards__inner"></div>
-        <br><br>︎
-︎︎
-︎`;
-
-        appContainer.appendChild(card);
-      });
-    })
-    .catch(error => console.error('Error fetching data:', error));
-});
-
-</script>
- 
-
-
-
-
-
-
-
-
-
-
-   
-</main>
-
-</body>
- 
-</html>
+}
