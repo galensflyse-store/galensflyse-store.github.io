@@ -12,7 +12,7 @@
 <link rel="icon" href="https://ebsayder-mg.github.io/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://galensflyse-store.vercel.app/magasin/application/s-c/application.css">
-  <title>GalensFlyse Store ; Minecraft Bedrock</title>
+  <title>GalensFlyse Store ; Minecraft Bedrock </title>
 </head>
 </head>
 <body>
@@ -65,9 +65,9 @@
   <body>
 
 <main class="main flow">
-  <h1 class="main__heading"> Minecraft Bedrock </h1>
+  
   <div id="app"></div>
-  <div class="overlay cards__inner"></div>
+  
 </main>
 
 
@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         card.classList.add('cards__card', 'card');
 
         card.innerHTML = `
+        <h1 class="main__heading">Minecraft ( Bedrock )</h1>
           <h2 class="card__heading">${app.name}</h2>
           <p class="card__price">Par ${app.by}</p>
           <ul role="list" class="card__bullets flow">
@@ -95,7 +96,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <a href="${app.installUrl}" class="card__cta cta">Installer</a>
           <br><br>
           <a href="${app.openUrl}" class="card__cta cta">Visitez la source</a>
-        `;
+        <div class="overlay cards__inner"></div>
+        <br><br>︎
+︎︎
+︎`;
 
         appContainer.appendChild(card);
       });
@@ -121,5 +125,4 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
  
 </html>
-
 
