@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-slide {
+  margin: 3.5px;
+}
+
+.slick-prev {
+  left: 75%;
+  top: 38px;
+}
+
+.slick-next {
+  right: 7%;
+  top: 38px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
