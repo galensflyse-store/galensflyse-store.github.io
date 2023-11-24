@@ -1,0 +1,30 @@
+[
+  {
+    "name": "App 1",
+    "by": "Developer 1",
+    "category": ["Jeux", "Application"],
+    "size": "100MB",
+    "tags": ["tag1", "tag2"],
+    "executionUrl": "http://example.com/app1",
+    "imageUrl": "http://example.com/app1.jpg"
+  },
+  {
+    "name": "App 2",
+    "by": "Developer 2",
+    "category": ["Développement"],
+    "size": "500MB",
+    "tags": ["crack", "legacy"],
+    "executionUrl": "http://example.com/app2",
+    "imageUrl": "http://example.com/app2.jpg"
+  },
+  {
+    "name": "App 3",
+    "by": "Developer 3",
+    "category": ["Application"],
+    "size": "300MB",
+    "tags": ["legacy", "mod"],
+    "executionUrl": "http://example.com/app3",
+    "imageUrl": "http://example.com/app3.jpg"
+  }
+  // Ajoute d'autres objets d'application au besoin
+]
