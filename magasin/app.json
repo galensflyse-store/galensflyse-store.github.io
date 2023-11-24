@@ -2,7 +2,7 @@
  
   
    {
-    "name": " CapCut et AlightMotion ",
+    "name": " CapCut et AlightMotion • Android ",
     "by": "  CapCup and AlightMotion ",
     "category": ["Application", "Android"],
     "size": "167.89 et  126 MB ",
@@ -13,7 +13,7 @@
   
   
     {
-    "name": " Youtube et Youtube Music",
+    "name": " Youtube et Youtube Music • Android ",
     "by": "  Youtube ",
     "category": ["Application", "Android"],
     "size": "4.3",
@@ -25,7 +25,7 @@
   
   
     {
-    "name": "Spotify Et deezer ",
+    "name": "Spotify Et deezer • Android ",
     "by": " Spotify AB / Deezer Music",
     "category": ["Application", "Android"],
     "size": "56.31 MO | 35.2 Mo",
@@ -36,7 +36,7 @@
   
   
     {
-    "name": " KsWeb et TrebEdit ",
+    "name": " KsWeb et TrebEdit • Android ",
     "by": "  KsLabs & Joel Etetafia",
     "category": ["Application", "Android"],
     "size": "120.15 Mo et 7.3Mo",
@@ -47,7 +47,7 @@
   
   
     {
-    "name": "SpaceFlight Sim• Android ",
+    "name": "SpaceFlight Sim • Android  ",
     "by": "  Stefo Mai Morojna",
     "category": ["Jeux", "Android"],
     "size": "63.07",
@@ -81,7 +81,7 @@
   {
     "name": "Minecraft Bedrock • Addons  ",
     "by": " Mojang Studio",
-    "category": ["Jeux", "Android", "Windows", "Ios"],
+    "category": ["Jeux", "Android", "Windows", "iOS"],
     "size": " Aucun packs.",
     "tags": ["legacy"],
     "executionUrl": "https://galensflyse-store.vercel.app/magasin/application/android/minecraft-be.html",
@@ -90,7 +90,7 @@
 
 
   {
-    "name": "TearDown ",
+    "name": "TearDown • windows ",
     "by": " TearDown Studio",
     "category": ["Jeux", "Windows"],
     "size": " 4 GO ",
@@ -100,7 +100,7 @@
   },
 
 {
-    "name": " Spaceflight Simulator v1.5.9.8 ",
+    "name": " Spaceflight Simulator v1.5.9.8 • windows ",
     "by": " Stefo Mai Morojna",
     "category": ["Jeux", "Windows"],
     "size": " 103 Mo ( ZIP )  ",
@@ -111,7 +111,7 @@
 
   
     {
-    "name": "BeamMG Drive  • Windows ",
+    "name": "BeamMG Drive  • windows ",
     "by": " BMG Drive",
     "category": ["Jeux", "Windows"],
     "size": "51.0 GO",
@@ -126,13 +126,13 @@
 
   
   {
-    "name": "App 3",
-    "by": "Developer 3",
-    "category": ["Application"],
-    "size": "300MB",
+    "name": "sportiFlyers Windows",
+    "by": "Spotiflyers",
+    "category": ["Application", "Windows"],
+    "size": "87.1",
     "tags": ["legacy", "mod"],
-    "executionUrl": "http://example.com/app3",
-    "imageUrl": "http://example.com/app3.jpg"
+    "executionUrl": "https://galensflyse-store.vercel.app/magasin/application/windows/spotiflyers/index.html",
+    "imageUrl": "https://spotiflyer.app/wp-content/uploads/2023/10/Spotiflyer-favicon-1.png"
   }
 
 ]
