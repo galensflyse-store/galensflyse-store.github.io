@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="https://ebsayder-mg.github.io/script.js"></script>
+     <!-- <link> et <script>   -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,700'>
+<link rel="icon" href="https://ebsayder-mg.github.io/favicon.ico" />
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,700'>
+<link rel="stylesheet" href="./c-s/style.css">
+   <link rel="stylesheet" href="https://ebsayder-mg.github.io/style.css">
+<link rel="icon" href="https://ebsayder-mg.github.io/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://galensflyse-store.vercel.app/magasin/application/s-c/application.css">
+  <title>GalensFlyse Store ;  Spotifyers For Windows ( MSI ) </title>
+</head> 
+</head>
+<body>
+ 
+  <body>
+<!-- partial:index.partial.html -->
+<header>
+  <div class='container'>
+    <div class='mobile_nav'>
+      <button class='burger' title='Open and close menu'>
+        <span class='mobile_nav__label'>Menu</span>
+        <div class='top stripe'></div>
+        <div class='middle stripe'></div>
+        <div class='bottom stripe'></div>
+      </button>
+    </div>
+    <div class='mobile_menu'>
+      <nav>
+        <ul>
+          <li class='visited'>
+            <a href='https://galensflyse-store.vercel.app/'>Home</a>
+          </li>
+ 
+        </ul>
+      </nav>
+    </div>
+    <div class='logo'>
+      <span>GelensFlyse // Store</span>
+    </div>
+    <nav class='head_nav'>
+      <ul>
+        <li class='visited'>
+          <a href='https://galensflyse-store.vercel.app/'>Home</a>
+        </li>
+        
+        
+      </ul>
+    </nav>
+    <div class='icons'>
+      <div class='block'>
+       
+      </div>
+      
+    </div>
+  </div>
+</header>
+<main>
+
+
+  <body>
+
+<main class="main flow">
+  
+  <div id="app"></div>
+  
+</main>
+
+
+<script src="https://galensflyse-store.vercel.app/magasin/application/s-c/application.js"></script>
+<script>
+  
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      const appContainer = document.getElementById('app');
+      data.applications.forEach(app => {
+        const card = document.createElement('div');
+        card.classList.add('cards__card', 'card');
+
+        card.innerHTML = `
+        <h1 class="main__heading"> Spotifyers For Windows ( MSI ) </h1>
+          <h2 class="card__heading">${app.name}</h2>
+          <p class="card__price">Par ${app.by}</p>
+          <ul role="list" class="card__bullets flow">
+            <li>Taille: ${app.size}</li>
+            <li>Date: ${app.date}</li>
+            <li>Avantage: ${app.advantage}</li>
+            <li>Description: ${app.description}</li>
+          </ul>
+          <a href="${app.installUrl}" class="card__cta cta">Installer</a>
+          <br><br>
+          <a href="${app.openUrl}" class="card__cta cta">Visitez la source</a>
+        <div class="overlay cards__inner"></div>
+        <br><br>︎
+︎︎
+︎`;
+
+        appContainer.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+});
+
+</script>
+ 
+
+
+
+
+
+
+
+
+
+
+   
+</main>
+
+</body>
+ 
+</html>
