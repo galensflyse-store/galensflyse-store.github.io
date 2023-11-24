@@ -40,12 +40,12 @@ function showDetails(app) {
 
 // Fonction pour filtrer les applications
 function filterApps() {
-  const categoryFilter = document.getElementById("categoryFilter").value;
-  const tagFilter = document.getElementById("tagFilter").value;
+  const categoryFilter = Array.from(document.getElementById("categoryFilter").selectedOptions).map(option => option.value);
+  const tagFilter = Array.from(document.getElementById("tagFilter").selectedOptions).map(option => option.value);
 
   const filteredApps = appData.filter(app => {
-    const categoryMatch = categoryFilter === "all" || app.category.includes(categoryFilter);
-    const tagMatch = tagFilter === "all" || app.tags.includes(tagFilter);
+    const categoryMatch = categoryFilter.includes("all") || app.category.some(cat => categoryFilter.includes(cat));
+    const tagMatch = tagFilter.includes("all") || app.tags.some(tag => tagFilter.includes(tag));
     
     return categoryMatch && tagMatch;
   });
@@ -60,8 +60,12 @@ function filterApps() {
 
 // Fonction pour effacer les filtres
 function clearFilters() {
-  document.getElementById("categoryFilter").value = "all";
-  document.getElementById("tagFilter").value = "all";
+  const categoryFilter = document.getElementById("categoryFilter");
+  const tagFilter = document.getElementById("tagFilter");
+  
+  categoryFilter.value = Array.from(categoryFilter.options).map(option => option.value);
+  tagFilter.value = Array.from(tagFilter.options).map(option => option.value);
+
   filterApps();
 }
 
