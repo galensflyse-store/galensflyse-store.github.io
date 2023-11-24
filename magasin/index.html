@@ -143,21 +143,28 @@ border-radius : 59px;
 
 
  
-<body>
-  <div class="header">
+
+ 
+ 
+ 
+ 
+ <div class="header">
     <h1>App Filter</h1>
     <div class="filter-container">
       <label for="categoryFilter">Category:</label>
-      <select id="categoryFilter" onchange="filterApps()">
+      <select id="categoryFilter" multiple onchange="filterApps()">
         <option value="all">All</option>
         <option value="Jeux">Jeux</option>
         <option value="Application">Application</option>
         <option value="Développement">Développement</option>
+        <option value="iOS">iOS</option>
+        <option value="Android">Android</option>
+        <option value="Windows">Windows</option>
         <!-- Add other categories as needed -->
       </select>
 
       <label for="tagFilter">Tag:</label>
-      <select id="tagFilter" onchange="filterApps()">
+      <select id="tagFilter" multiple onchange="filterApps()">
         <option value="all">All</option>
         <option value="crack">Crack</option>
         <option value="legacy">Legacy</option>
@@ -169,6 +176,9 @@ border-radius : 59px;
   </div>
   
   <div class="app-container" id="appContainer"></div>
+
+  
+  
   <script src="../c-s/store.js"></script>
 
 
