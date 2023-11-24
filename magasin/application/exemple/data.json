@@ -10,11 +10,9 @@
       "installUrl": "https://example.com/install",
       "openUrl": "https://example.com/open",
       "imageUrl": "https://example.com/minecraft-image.jpg"
-    }
+    },
     
-  ],
-
-   "applications": [
+  
     {
       "name": "Minecraft",
       "size": "100 MB",
