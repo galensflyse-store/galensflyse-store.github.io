@@ -21,12 +21,12 @@
 
 
   {
-    "name": "Minecraft Bedrock • Texture ",
+    "name": "Minecraft Bedrock • Addons  ",
     "by": " Mojang Studio",
     "category": ["Jeux"],
     "size": " Aucun packs.",
     "tags": ["legacy"],
-    "executionUrl": "http://example.com/app1",
+    "executionUrl": "https://galensflyse-store.vercel.app/magasin/application/android/minecraft-be.html",
     "imageUrl": "https://galensflyse-store.github.io/magasin/logo/Minecraft.jpeg"
   },
 
