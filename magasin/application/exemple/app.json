@@ -1,0 +1,17 @@
+{
+    "applications": [
+      {
+        "name": "Minecraft",
+        "size": "100 MB",
+        "by": "Developer Name",
+        "date": "2023-11-24",
+        "advantage": "Some advantage",
+        "description": "Description of Minecraft.",
+        "installUrl": "https://example.com/install",
+        "openUrl": "https://example.com/open",
+        "imageUrl": "https://example.com/minecraft-image.jpg"
+      },
+ 
+    ]
+  }
+  
