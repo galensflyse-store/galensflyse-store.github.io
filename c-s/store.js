@@ -1,120 +1,76 @@
-new Vue({
-  el: '#app',
-  components: {
-    'icon': { template: '<svg><use :xlink:href="use"/></svg>', props: ['use'] } },
+// Déclaration du tableau pour stocker les données d'application
+let appData = [];
 
+// Fonction pour rendre chaque application
+function renderApp(app) {
+  const appContainer = document.getElementById("appContainer");
+  const appCard = document.createElement("div");
+  appCard.className = "app-card";
 
-  data() {
-    return {
-      modal: false,
-      companies: [],
-      dropdown: { height: 0 },
-      rating: { min: 10, max: 0 },
-      filters: { countries: {}, categories: {}, rating: 0 },
-      menus: { countries: false, categories: false, rating: false } };
+  const appImage = document.createElement("img");
+  appImage.src = app.imageUrl;
+  appImage.alt = app.name;
+  appImage.className = "app-image";
 
-  },
+  const appName = document.createElement("h3");
+  appName.textContent = app.name;
 
-  computed: {
-    activeMenu() {
-      return Object.keys(this.menus).reduce(($$, set, i) => this.menus[set] ? i : $$, -1);
-    },
+  const openButton = document.createElement("button");
+  openButton.textContent = "Open";
+  openButton.className = "btn";
+  openButton.addEventListener("click", () => window.open(app.executionUrl));
 
-    list() {
-      let { countries, categories } = this.activeFilters;
+  const detailsButton = document.createElement("button");
+  detailsButton.textContent = "Details";
+  detailsButton.className = "btn";
+  detailsButton.addEventListener("click", () => showDetails(app));
 
-      return this.companies.filter(({ country, keywords, rating }) => {
-        if (rating < this.filters.rating) return false;
-        if (countries.length && !~countries.indexOf(country)) return false;
-        return !categories.length || categories.every(cat => ~keywords.indexOf(cat));
-      });
-    },
+  appCard.appendChild(appImage);
+  appCard.appendChild(appName);
+  appCard.appendChild(openButton);
+  appCard.appendChild(detailsButton);
 
-    activeFilters() {
-      let { countries, categories } = this.filters;
+  appContainer.appendChild(appCard);
+}
 
-      return {
-        countries: Object.keys(countries).filter(c => countries[c]),
-        categories: Object.keys(categories).filter(c => categories[c]),
-        rating: this.filters.rating > this.rating.min ? [this.filters.rating] : [] };
+// Fonction pour afficher les détails d'une application
+function showDetails(app) {
+  alert(`Details for ${app.name}:\nBy: ${app.by}\nSize: ${app.size}\nTags: ${app.tags.join(", ")}`);
+}
 
-    } },
+// Fonction pour filtrer les applications
+function filterApps() {
+  const categoryFilter = document.getElementById("categoryFilter").value;
+  const tagFilter = document.getElementById("tagFilter").value;
 
+  const filteredApps = appData.filter(app => {
+    const categoryMatch = categoryFilter === "all" || app.category.includes(categoryFilter);
+    const tagMatch = tagFilter === "all" || app.tags.includes(tagFilter);
+    
+    return categoryMatch && tagMatch;
+  });
 
-  watch: {
-    activeMenu(index, from) {
-      if (index === from) return;
+  // Efface le contenu actuel
+  const appContainer = document.getElementById("appContainer");
+  appContainer.innerHTML = "";
 
-      this.$nextTick(() => {
-        if (!this.$refs.menu || !this.$refs.menu[index]) {
-          this.dropdown.height = 0;
-        } else {
-          this.dropdown.height = `${this.$refs.menu[index].clientHeight + 16}px`;
-        }
-      });
-    } },
+  // Rendre les applications filtrées
+  filteredApps.forEach(renderApp);
+}
 
+// Fonction pour effacer les filtres
+function clearFilters() {
+  document.getElementById("categoryFilter").value = "all";
+  document.getElementById("tagFilter").value = "all";
+  filterApps();
+}
 
-  methods: {
-    setFilter(filter, option) {
-      if (filter === 'countries') {
-        this.filters[filter][option] = !this.filters[filter][option];
-      } else {
-        setTimeout(() => {
-          this.clearFilter(filter, option, this.filters[filter][option]);
-        }, 100);
-      }
-    },
-
-    clearFilter(filter, except, active) {
-      if (filter === 'rating') {
-        this.filters[filter] = this.rating.min;
-      } else {
-        Object.keys(this.filters[filter]).forEach(option => {
-          this.filters[filter][option] = except === option && !active;
-        });
-      }
-    },
-
-    clearAllFilters() {
-      Object.keys(this.filters).forEach(this.clearFilter);
-    },
-
-    setMenu(menu, active) {
-      Object.keys(this.menus).forEach(tab => {
-        this.menus[tab] = !active && tab === menu;
-      });
-    } },
-
-
-  beforeMount() {
-    fetch('https://s3-us-west-2.amazonaws.com/s.cdpn.io/450744/mock-data.json').
-    then(response => response.json()).
-    then(companies => {
-      this.companies = companies;
-
-      companies.forEach(({ country, keywords, rating }) => {
-        this.$set(this.filters.countries, country, false);
-
-        if (this.rating.max < rating) this.rating.max = rating;
-        if (this.rating.min > rating) {
-          this.rating.min = rating;
-          this.filters.rating = rating;
-        }
-
-        keywords.forEach(category => {
-          this.$set(this.filters.categories, category, false);
-        });
-      });
-    });
-  } });
-
-
-// inject svg spritesheet
-fetch('https://s3-us-west-2.amazonaws.com/s.cdpn.io/450744/mock-logos.svg').
-then(response => response.text()).then(sprite => {
-  let figure = document.createElement('figure');
-  figure.style.display = 'none';
-  figure.innerHTML = sprite;
-  document.body.insertBefore(figure, document.body.children[0]);
-});
+// Charger le fichier JSON
+fetch('app.json')
+  .then(response => response.json())
+  .then(data => {
+    // Rendre chaque application
+    appData = data;
+    filterApps(); // Appliquer les filtres initiaux
+  })
+  .catch(error => console.error('Erreur lors du chargement des données de l\'application:', error));
