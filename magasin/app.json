@@ -143,6 +143,19 @@
     "tags": ["legacy", "mod"],
     "executionUrl": "https://galensflyse-store.vercel.app/magasin/application/windows/spotiflyers/index.html",
     "imageUrl": "https://spotiflyer.app/wp-content/uploads/2023/10/Spotiflyer-favicon-1.png"
+  },
+
+
+ {
+    "name": "Grand Theft Auto V |Lspd fr by EnesGP ( bientot ) ",
+    "by": "Rockstar Game , G17 Media et EnesGP",
+    "category": ["Application", "Windows"],
+    "size": "n/a",
+    "tags": ["legacy", "mod"],
+    "executionUrl": "https://galensflyse-store.vercel.app/magasin/application/windows/gta5-lspdfr/1/index.html",
+    "imageUrl": "https://imgvol.cdn.lcpdfr.com/assets/monthly_2024_02/FRLogoNewLogoOnly.png.4762ed5f12846aae27faa455e0be4888(2).png.fdab16d62ab8306ef34cec59284f4b12.png.9d5e6cf9427ad028178843acb6c725cb.png"
   }
+
+ 
 
 ]
