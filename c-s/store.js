@@ -77,4 +77,4 @@ fetch('app.json')
     appData = data;
     filterApps(); // Appliquer les filtres initiaux
   })
-  .catch(error => console.error('Erreur lors du chargement des données de l\'application:', error));
+  .catch(error => console.error('Erreur lors du chargement des données de l`application:', error));
