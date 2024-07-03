@@ -6,11 +6,11 @@ section:has([name="pkyt"]:checked) article:has([data-category="pkyt"]) {
 	display: block;
 }
 
-section:has([name="naps"]:checked) article:has([data-category="naps"]) {
+section:has([name="win"]:checked) article:has([data-category="naps"]) {
 	display: block;
 }
 
-section:has([name="computers"]:checked)
+section:has([name="iOS"]:checked)
 	article:has([data-category="computers"]) {
 	display: block;
 }
@@ -23,11 +23,11 @@ article {
 		--hue: 233.35;
 	}
 
-	&:has([data-category="computers"]) {
+	&:has([data-category="win"]) {
 		--hue: 91.24;
 	}
 
-	&:has([data-category="naps"]) {
+	&:has([data-category="iOS"]) {
 		--hue: 334.61;
 	}
 
